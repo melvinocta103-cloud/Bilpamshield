@@ -47,6 +47,13 @@ export function ContactPage({ navigate }: { navigate: (to: string) => void }) {
     if (!validate()) return;
     setStatus('submitting');
     setErrorMessage('');
+
+    if (!supabase) {
+      setStatus('error');
+      setErrorMessage('This form is temporarily unavailable. Please contact us directly.');
+      return;
+    }
+
     try {
       const { error } = await supabase.from('contact_messages').insert({
         name: form.name.trim(),

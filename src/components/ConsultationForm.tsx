@@ -59,6 +59,12 @@ export function ConsultationForm({
     setStatus('submitting');
     setErrorMessage('');
 
+    if (!supabase) {
+      setStatus('error');
+      setErrorMessage('This form is temporarily unavailable. Please contact us directly.');
+      return;
+    }
+
     try {
       const { error } = await supabase.from('consultation_requests').insert({
         name: form.name.trim(),
