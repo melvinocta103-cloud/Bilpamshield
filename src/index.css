@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-navy-900 font-sans antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .container-pro {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-gold-500/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-navy-900/20 hover:border-navy-900 text-navy-900 font-semibold rounded-lg transition-all duration-200 hover:bg-navy-900 hover:text-white;
+  }
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-white/30 hover:border-white text-white font-semibold rounded-lg transition-all duration-200 hover:bg-white hover:text-navy-900;
+  }
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#1ebd5a] text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-navy-900/10 hover:-translate-y-1;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-navy-900/15 bg-white text-navy-900 placeholder-navy-900/40 focus:outline-none focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all duration-200;
+  }
+  .label-field {
+    @apply block text-sm font-semibold text-navy-800 mb-1.5;
+  }
+}
+
+@layer utilities {
+  .text-shadow-lg {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  .bg-hero-overlay {
+    background: linear-gradient(135deg, rgba(5, 13, 26, 0.92) 0%, rgba(10, 31, 68, 0.78) 50%, rgba(15, 42, 92, 0.6) 100%);
+  }
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                       linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

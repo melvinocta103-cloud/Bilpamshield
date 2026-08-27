@@ -1,0 +1,4 @@
+project_id = "bilpam-shield-security"
+
+[functions.notify-enquiry]
+verify_jwt = false
